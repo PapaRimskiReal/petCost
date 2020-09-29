@@ -40,7 +40,6 @@ public class User {
 	
 	@Email
 	private String email;
-//	@Enumerated(value = EnumType.STRING)
 	@Column(name = "role")
 	private String role = "USER";
 	@Enumerated(value = EnumType.STRING)
@@ -104,14 +103,5 @@ public class User {
 		this.role = role;
 	}
 
-//	public Role getRole() {
-//		return role;
-//	}
-//
-//	public void setRole(Role role) {
-//		this.role = role;
-//	}
-	
-	
 
 }

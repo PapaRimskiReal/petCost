@@ -18,9 +18,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import com.sun.istack.NotNull;
 
+import homeworklvl.demo.domain.modelCost.Cost;
 import homeworklvl.demo.domain.modelDiary.Diary;
 import homeworklvl.demo.domain.modelUser.User;
-import homeworklvl.demo.domain.petCost.PetCost;
 
 @Entity
 @Table(name = "pet")
@@ -31,7 +31,7 @@ public class Pet {
 	private Long id;
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "pet")
-	private List<PetCost> petCosts;
+	private List<Cost> costs;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "pet")
 	private List<Diary> diarys;
@@ -50,7 +50,7 @@ public class Pet {
 	
 	@Column(name = "registrationDay")
 	@NotNull
-	@DateTimeFormat(pattern = "dd.MM.yyyy")
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date petRegistrationDate;
 	
 	@Column(name = "unregistrationDay")
@@ -100,12 +100,12 @@ public class Pet {
 		this.diarys = diarys;
 	}
 
-	public List<PetCost> getPetCosts() {
-		return petCosts;
+	public List<Cost> getCosts() {
+		return costs;
 	}
 
-	public void setPetCosts(List<PetCost> petCosts) {
-		this.petCosts = petCosts;
+	public void setCosts(List<Cost> costs) {
+		this.costs = costs;
 	}
 
 	public User getUser() {

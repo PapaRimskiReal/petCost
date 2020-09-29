@@ -23,14 +23,15 @@
 			<legend>New Pet:</legend>
 
 			<div>
-				<label for="name">Login</label>
-				<form:input id="name" path="name" type="text" />
-				<form:errors path="username" />
+				<label for="petName">Name</label>
+				<form:input id="petName" path="petName" type="text" />
+				<form:errors path="petName" />
 			</div>
 
 			<div>
 				<label for="petType">Type</label>
-				<form:input id="petType" path="petType" items="${petType}" />
+				<form:select id="petType" path="petType" items="${petType}" />
+			
 				<form:errors path="petType" />
 			</div>
 

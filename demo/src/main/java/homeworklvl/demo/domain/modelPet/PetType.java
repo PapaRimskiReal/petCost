@@ -12,6 +12,6 @@ public enum PetType {
 	Hedgehog,
 	PetRat,
 	Aquarium,
-	Tortoises,
+	Tortoises;
 	
 }

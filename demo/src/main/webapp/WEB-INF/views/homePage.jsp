@@ -12,6 +12,6 @@
 <body>
 	
 	<a href="/registration">Registration</a>
-	<a th:href="@{authenticated}">/authenticated</a>
+
 </body>
 </html>
